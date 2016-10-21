@@ -5,7 +5,20 @@
 int times_table(void);
 int main(int argc, char *argv[])
 {
-	
+	int numbers = 0;
+	if(argc >= 3){
+		printf("The program only accepts one argument, the default variable is\
+				10");	
+		numbers = 10;
+	}else if(argc == 2){
+		numbers = strtol(argv[1], NULL, 10);
+	}else{
+		numbers = 10;
+
+	}
+ 	
+
+
 	printf("user value %s \n", argv[1]);
 	printf("\n");
 	int i = 1, k;
@@ -16,11 +29,11 @@ int main(int argc, char *argv[])
 
 	
 
-	while(i<= strtol(argv[1], NULL, 10)){
+	while(i<=numbers ){
 		
 		printf("%d\t", i );
 		int j = 2;
-		while(j <= strtol(argv[1], NULL, 10)){
+		while(j <= numbers){
 			k = j * i;
 			printf ("%d\t", k);
 			j++;
