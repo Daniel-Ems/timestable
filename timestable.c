@@ -30,12 +30,12 @@ int main(int argc, char *argv[])
 
 	//The following two if statements evaluate the value of the user's command
 	//line arguments, and handle them appropriately.
-	if(max_factor < 0 || max_factor > 32){
+	if(max_factor <= 0 || max_factor > 32){
 		puts("*** Please keep your Maximum between 1 and 32***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***");
 		max_factor = 10;
 	}
-	if(min_factor < 0 || min_factor > max_factor){
+	if(min_factor <= 0 || min_factor > max_factor){
 		puts("*** Please keep your Minimum between 1 and the Maximum ***");
 		puts("*** Your Minimum has been auto-corrected to 1 ***");
 		min_factor = 1;
