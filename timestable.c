@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
 	}
-	if(max_factor < min_factor || max_factor > 32){
+	if(max_factor < 0 || max_factor > 32){
 		puts("*** Please keep your Maximum between 1 and 32***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***");
 		max_factor = 10;
