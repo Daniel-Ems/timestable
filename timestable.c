@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 	}
 
 	printf("\n");
+
 	int i = 1, g;
 
 	printf("%5s", "*");
