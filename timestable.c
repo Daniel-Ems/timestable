@@ -9,21 +9,20 @@ int main(int argc, char *argv[])
 		printf("The program only accepts one argument, the default variable is\
  10");	
 	}else if(argc == 2){
+		if(strtol(argv[1],NULL, 10) <= 0){
+		numbers = 10;
+		printf("Numbers greater than 0 please");
+		}else if(strtol(argv[1],NULL, 10) > 32){
+		numbers = 10; 
+		printf("Numbers less than 33 please");
+		}else{
 		numbers = strtol(argv[1], NULL, 10);
-
+		}	
 	}else{
 		printf("10 X 10\n");
 	}
 
-	if(strtol(argv[1],NULL, 10) <= 0){
-		numbers = 10;
-		printf("Numbers greater than 0 please");
-	}else if(strtol(argv[1],NULL, 10) > 32){
-		numbers = 10; 
-		printf("Numbers less than 33 please");
-	}else{
-		numbers = strtol(argv[1], NULL, 10);
-		}
+	
 
 	printf("\n");
 
