@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	
 	//The conditions are used to error check for min_factors valid values. 
 	if(min_factor <= 0 || min_factor > max_factor){
-		puts("*** Please keep your Minimum between 1 and the Maximum"
+		puts("*** Please keep your Minimum between 1 and the Maximum "
 		     "inclusively ***");
 		puts("*** Your Minimum has been auto-corrected to 1 ***\n");
 		min_factor = 1;
