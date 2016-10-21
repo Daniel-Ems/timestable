@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		max_factor = 10;
 	}
 	
-	//The condition are used to error check for min_factors valid values. 
+	//The conditions are used to error check for min_factors valid values. 
 	if(min_factor <= 0 || min_factor > max_factor){
 		puts("*** Please keep your Minimum between 1 and the Maximum"
 		     "inclusively ***");
@@ -50,8 +50,7 @@ int main(int argc, char *argv[])
 		printf("%5d", i);
 	}
 	
-	//Allow for the table to be built with no arguments passed, one argument 
-	//passed, or two arguments passed. 
+	//Allow for the table to build with no, one, or two arguments passed. 
 	printf("\n");
 	for(int i = min_factor; i <= max_factor; i++){
 		printf("%5d", i);
