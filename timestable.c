@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	//Ensure the user does not try and pass an "illegal" number of command
 	//line arguments. 
 	if(argc >= 4){
-		puts("***The program accepts 0, 1, or 2 arguments***");
+		puts("*** The program accepts 0, 1, or 2 arguments ***");
 	}
 	if(argc == 3){
 		max_factor = strtol(argv[2], NULL, 10);
