@@ -27,17 +27,17 @@ int main(int argc, char *argv[])
 	if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
 	}
-
-	//The following two if statements evaluate the value of the user's command
-	//line arguments, and handle them appropriately.
+	//Defines valid values for Max_factor as anything 1 and 32 inclusively. 
+	//Max_factor is defaulted to 10 if an invalid value is supplied, and 
+	//the user is notified of the auto-correct, and reminded of valid values
 	if(max_factor <= 0 || max_factor > 32){
-		puts("*** Please keep your Maximum between 1 and 32 ***");
+		puts("*** Please keep your Maximum between 1 and 32"
+			 " inclusively ***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***\n");
-		
 		max_factor = 10;
 	}
 	if(min_factor <= 0 || min_factor > max_factor){
-		puts("*** Please keep your Minimum between 1 and the Maximum ***");
+		puts("*** Please keep your Minimum between 1 and the Maximum inclusively ***");
 		puts("*** Your Minimum has been auto-corrected to 1 ***\n");
 		min_factor = 1;
 	}
