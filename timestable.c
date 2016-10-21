@@ -4,10 +4,16 @@
 
 int main(int argc, char *argv[])
 {
-	int numbers = 10;
-	if(argc >= 3){
-		printf("The program only accepts one argument, the default variable is\
- 10");	
+	int numbers = 10;//max
+	int minimum = 1, minimum2;
+
+	if(argc >=4){
+		puts("The program only accepts one argument");
+	}else if(argc == 3){
+		numbers = strtol(argv[2], NULL, 10);
+		minimum = strtol(argv[1], NULL, 10);
+		minimum2 = strtol(argv[1], NULL, 10);
+		
 	}else if(argc == 2){
 		if(strtol(argv[1],NULL, 10) <= 0){
 		numbers = 10;
@@ -22,24 +28,19 @@ int main(int argc, char *argv[])
 		printf("10 X 10\n");
 	}
 
-	
-
 	printf("\n");
-
-	int i = 1, g;
 
 	printf("%5s", "*");
 
-	for(i = 1; i<=numbers;i++){
-		printf("%5d", i);
+	for(minimum; minimum<=numbers; minimum++){
+		printf("%5d", minimum);
 	}
 	printf("\n");
-	for(g = 1 ; g<= numbers;g++){
-		printf("%5d", g );
-		int j = 2;
-		int k =0;
-		for(j = 1; j <= numbers; j++){
-			k = j * g;
+	for(minimum; minimum<= numbers; minimum++){
+		printf("%5d", minimum );
+		int k = 0;
+		for(minimum2 = 1; minimum2 <= numbers; minimum2++){
+			k = minimum2 * minimum;
 			printf ("%5d", k);
 			}
 		printf("\n");
