@@ -2,7 +2,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-int times_table(void);
 int main(int argc, char *argv[])
 {
 	int numbers = 10;
