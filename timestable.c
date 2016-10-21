@@ -3,13 +3,22 @@
 
 int main(int argc, char *argv[])
 {
+	//the max_factor is set to a default of 10. The maximum is 32. if the user
+	//inputs a value outside of 1-32, the variable defaults back to 10.
+	int max_factor = 10;
 	
-	int max_factor = 10;//maximum number multiplied
-	int min_factor = 1;//minimum number miltiplied
+	//the min_factor is set to a default of 1, and shall not exceed the maximum
+	//if the user inputs a value outside of 1 - maximum, the variable defaults
+	//to 1. 
+	int min_factor = 1;
 	
+	//seperates the beginning of the program from the cmd prompt
 	printf("\n");
+	
+	//The following three if statements evaluate the number of command line
+	//arguments the user passes, and handles them accordingly.
 	if(argc >= 4){
-		puts("The program accepts 0, 1, or 2 arguments");
+		puts("***The program accepts 0, 1, or 2 arguments***");
 	}
 	if(argc == 3){
 		max_factor = strtol(argv[2], NULL, 10);
@@ -18,6 +27,9 @@ int main(int argc, char *argv[])
 	if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
 	}
+
+	//The following two if statements evaluate the value of the user's command
+	//line arguments, and handle them appropriately.
 	if(max_factor < 0 || max_factor > 32){
 		puts("*** Please keep your Maximum between 1 and 32***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***");
