@@ -7,14 +7,14 @@ int main(int argc, char *argv[])
 	int min_factor = 1;//minimum number miltiplied
 	
 	if(argc >= 4){
-		puts("The program only accepts one argument");
+		puts("The program accepts zero, one, or two arguments");
 	}else if(argc == 3){
 		max_factor = strtol(argv[2], NULL, 10);
 		min_factor = strtol(argv[1], NULL, 10);
 	}else if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
 	}else{
-		printf("10 X 10\n");	
+		printf("Min:%d, Max:%d", min_factor, max_factor);	
 	}
 
 	if(max_factor < 0 || max_factor > 32){
@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
 		printf("%5d", i);
 		for(int j = min_factor; j <= max_factor; j++){
 			printf ("%5d", j * i);
-			}
-		printf("\n");
 		}
+		printf("\n");
+	}
 	
 }
