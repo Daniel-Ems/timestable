@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("10 X 10\n");	
 	}
 
-	if(maximum < 0){
+	if(maximum < 0 || maximum > 32){
 		maximum = 10;
 	}
 	if(minimum < 0){
