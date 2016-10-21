@@ -8,22 +8,17 @@ int main(int argc, char *argv[])
 	
 	if(argc >= 4){
 		puts("The program accepts zero, one, or two arguments");
-	}else if(argc == 3){
+	}if(argc == 3){
 		max_factor = strtol(argv[2], NULL, 10);
 		min_factor = strtol(argv[1], NULL, 10);
-	}else if(argc == 2){
+	}if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
-	}else{
-		printf("Min:%d, Max:%d", min_factor, max_factor);	
-	}
-
-	if(max_factor < 0 || max_factor > 32){
+	}if(max_factor < 0 || max_factor > 32){
 		max_factor = 10;
-	}
-	if(min_factor < 0 || min_factor > max_factor){
+	}if(min_factor < 0 || min_factor > max_factor){
 		min_factor = 1;
 	}
-
+	printf("Min:%d, Max:%d", min_factor, max_factor);
 	printf("\n");
 	printf("%5s", "*");
 	for(int i = min_factor; i  <= max_factor; i++){
