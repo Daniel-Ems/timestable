@@ -3,20 +3,17 @@
 
 int main(int argc, char *argv[])
 {
-	//the max_factor is set to a default of 10. The maximum is 32. if the user
-	//inputs a value outside of 1-32, the variable defaults back to 10.
+	//max_factor default
 	int max_factor = 10;
 	
-	//the min_factor is set to a default of 1, and shall not exceed the maximum
-	//if the user inputs a value outside of 1 - maximum, the variable defaults
-	//to 1. 
+	//min_factor default
 	int min_factor = 1;
 	
-	//seperates the beginning of the program from the cmd prompt
+	//Seperates the beginning of the program from the cmd prompt
 	printf("\n");
 	
 	//The following three if statements evaluate the number of command line
-	//arguments the user passes, and handles them accordingly.
+	//arguments the user passes, and sets variables accordingly.
 	if(argc >= 4){
 		puts("***The program accepts 0, 1, or 2 arguments***");
 	}
@@ -27,29 +24,45 @@ int main(int argc, char *argv[])
 	if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
 	}
-	//Defines valid values for Max_factor as anything 1 and 32 inclusively. 
-	//Max_factor is defaulted to 10 if an invalid value is supplied, and 
+
+	//Defines valid values for max_factor as anything 1 and 32 inclusively. 
+	//max_factor is defaulted to 10 if an invalid value is supplied, and 
 	//the user is notified of the auto-correct, and reminded of valid values
+
 	if(max_factor <= 0 || max_factor > 32){
-		puts("*** Please keep your Maximum between 1 and 32"
-			 " inclusively ***");
+		puts("*** Please keep your Maximum between 1 and 32 inclusively ***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***\n");
 		max_factor = 10;
 	}
+	
+	//Defines valid values for min_factor as anything between 1 and Max_factor
+	//inclusively. min_factor has a default of 1, and is auto-corrected to such
+	//if the user supplies an invalid value. The user is then notified. 
+
 	if(min_factor <= 0 || min_factor > max_factor){
-		puts("*** Please keep your Minimum between 1 and the Maximum inclusively ***");
+		puts("*** Please keep your Minimum between 1 and the Maximum"
+		     "inclusively ***");
 		puts("*** Your Minimum has been auto-corrected to 1 ***\n");
 		min_factor = 1;
 	}
+	
+	//Prints the times tables current min and max. 
+
 	printf(">>>Times Table Minimum:%d, Maximum:%d", min_factor, max_factor);
 	printf("\n");
 	printf("%5s", "*");
+	
+	//Creates header row for times table 
 	for(int i = min_factor; i  <= max_factor; i++){
 		printf("%5d", i);
 	}
+	
+	//Creates output up and down
 	printf("\n");
 	for(int i = min_factor; i <= max_factor; i++){
 		printf("%5d", i);
+		
+		//Creates output left to right
 		for(int j = min_factor; j <= max_factor; j++){
 			printf ("%5d", j * i);
 		}
