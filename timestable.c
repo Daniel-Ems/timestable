@@ -3,9 +3,11 @@
 
 int main(int argc, char *argv[])
 {
+	
 	int max_factor = 10;//maximum number multiplied
 	int min_factor = 1;//minimum number miltiplied
 	
+	printf("\n");
 	if(argc >= 4){
 		puts("The program accepts zero, one, or two arguments");
 	}
@@ -40,5 +42,6 @@ int main(int argc, char *argv[])
 		}
 		printf("\n");
 	}
+	printf("\n");
 	
 }
