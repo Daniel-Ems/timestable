@@ -13,9 +13,11 @@ int main(int argc, char *argv[])
 		min_factor = strtol(argv[1], NULL, 10);
 	}if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
-	}if(max_factor < 0 || max_factor > 32){
+	}if(max_factor < min_factor || max_factor > 32){
+		printf("***Please keep your maximum between 1 and 32***\n");
 		max_factor = 10;
 	}if(min_factor < 0 || min_factor > max_factor){
+		printf("***Please keep your minumum betwwn 1 and the maximum***\n");
 		min_factor = 1;
 	}
 	printf("Min:%d, Max:%d", min_factor, max_factor);
