@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdbool.h>
+//#include <stdbool.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[])
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if(maximum < 0 || maximum > 32){
 		maximum = 10;
 	}
-	if(minimum < 0){
+	if(minimum < 0 || minimum > maximum){
 		minimum = 1;
 	}
 
