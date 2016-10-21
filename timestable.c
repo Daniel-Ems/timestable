@@ -3,10 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-	//set max_factor default.
+	//Set max_factor default.
 	int max_factor = 10;
 	
-	//set min_factor default.
+	//Set min_factor default.
 	int min_factor = 1;
 	
 	//Creates a clean appearance at the beginning of the program.
@@ -25,14 +25,14 @@ int main(int argc, char *argv[])
 		max_factor = strtol(argv[1], NULL, 10);
 	}
 
-	//the conditions are used to error check for max_factors valid values.
+	//The conditions are used to error check for max_factors valid values.
 	if(max_factor <= 0 || max_factor > 32){
 		puts("*** Please keep your Maximum between 1 and 32 inclusively ***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***\n");
 		max_factor = 10;
 	}
 	
-	//the condition are used to error check for min_factors valid values. 
+	//The condition are used to error check for min_factors valid values. 
 	if(min_factor <= 0 || min_factor > max_factor){
 		puts("*** Please keep your Minimum between 1 and the Maximum"
 		     "inclusively ***");
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	printf("\n");
 	printf("%5s", "*");
 	
-	//create a header for the table based on the default or user input.
+	//Create a header for the table based on the default or user input.
 	for(int i = min_factor; i  <= max_factor; i++){
 		printf("%5d", i);
 	}
