@@ -15,6 +15,16 @@ int main(int argc, char *argv[])
 		printf("10 X 10\n");
 	}
 
+	if(strtol(argv[1],NULL, 10) <= 0){
+		numbers = 10;
+		printf("Numbers greater than 0 please");
+	}else if(strtol(argv[1],NULL, 10) > 32){
+		numbers = 10; 
+		printf("Numbers less than 33 please");
+	}else{
+		numbers = strtol(argv[1], NULL, 10);
+		}
+
 	printf("\n");
 
 	int i = 1, g;
@@ -23,7 +33,8 @@ int main(int argc, char *argv[])
 
 	for(i = 1; i<=numbers;i++){
 		printf("%5d", i);
-	}printf("\n");
+	}
+	printf("\n");
 	for(g = 1 ; g<= numbers;g++){
 		printf("%5d", g );
 		int j = 2;
