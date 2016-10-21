@@ -17,15 +17,22 @@ int main(int argc, char *argv[])
 	}
 
 	printf("\n");
-	int i = 1, k;
+	int i = 1, g;
 
-	for(i =1; i<=numbers;i++){
-		printf("%5d", i );
+	printf("%5s", "*");
+
+	for(i = 1; i<=numbers;i++){
+		printf("%5d", i);
+	}printf("\n");
+	for(g = 1 ; g<= numbers;g++){
+		printf("%5d", g );
 		int j = 2;
-		for(j = 2; j <= numbers; j++){
-			k = j * i;
+		int k =0;
+		for(j = 1; j <= numbers; j++){
+			k = j * g;
 			printf ("%5d", k);
-		}
+			}
 		printf("\n");
-	}		
+		}
+	
 }
