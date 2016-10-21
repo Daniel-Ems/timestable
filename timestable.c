@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
 	}
 
 	//Defines valid values for max_factor as anything between 1 and 32 
-    //inclusively. max_factor is defaulted to 10 if an invalid value is 
-    //supplied, and the user is notified of the auto-correct, and reminded 
-    //of valid values.
+	//inclusively. max_factor is defaulted to 10 if an invalid value is 
+	//supplied, and the user is notified of the auto-correct, and reminded 
+	//of valid values.
 	if(max_factor <= 0 || max_factor > 32){
 		puts("*** Please keep your Maximum between 1 and 32 inclusively ***");
 		puts("*** Your Maximum has been auto-corrected to 10 ***\n");
