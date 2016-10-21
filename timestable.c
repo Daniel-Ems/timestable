@@ -19,16 +19,13 @@ int main(int argc, char *argv[])
 	printf("\n");
 	int i = 1, k;
 
-	while(i<=numbers ){
-		
-		printf("%4d", i );
+	for(i =1; i<=numbers;i++){
+		printf("%5d", i );
 		int j = 2;
-		while(j <= numbers){
+		for(j = 2; j <= numbers; j++){
 			k = j * i;
-			printf ("%4d", k);
-			j++;
+			printf ("%5d", k);
 		}
-		i++;
 		printf("\n");
 	}		
 }
