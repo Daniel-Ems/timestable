@@ -5,43 +5,36 @@
 int main(int argc, char *argv[])
 {
 	int numbers = 10;//max
-	int minimum = 1, minimum2;
-
+	int minimum = 1;
+	
 	if(argc >=4){
 		puts("The program only accepts one argument");
 	}else if(argc == 3){
 		numbers = strtol(argv[2], NULL, 10);
 		minimum = strtol(argv[1], NULL, 10);
-		minimum2 = strtol(argv[1], NULL, 10);
-		
 	}else if(argc == 2){
-		if(strtol(argv[1],NULL, 10) <= 0){
-		numbers = 10;
-		printf("Numbers greater than 0 please");
-		}else if(strtol(argv[1],NULL, 10) > 32){
-		numbers = 10; 
-		printf("Numbers less than 33 please");
-		}else{
 		numbers = strtol(argv[1], NULL, 10);
-		}	
 	}else{
-		printf("10 X 10\n");
+		printf("10 X 10\n");	
+	}
+
+	if(numbers < 0){
+		numbers = 10;
+	}
+	if(minimum < 0){
+		minimum = 1;
 	}
 
 	printf("\n");
-
 	printf("%5s", "*");
-
-	for(minimum; minimum<=numbers; minimum++){
-		printf("%5d", minimum);
+	for(int i = minimum; i  <=numbers; i++){
+		printf("%5d", i);
 	}
 	printf("\n");
-	for(minimum; minimum<= numbers; minimum++){
-		printf("%5d", minimum );
-		int k = 0;
-		for(minimum2 = 1; minimum2 <= numbers; minimum2++){
-			k = minimum2 * minimum;
-			printf ("%5d", k);
+	for(int i = minimum; i <= numbers; i++){
+		printf("%5d", i);
+		for(int j = minimum; j <= numbers; j++){
+			printf ("%5d", j * i);
 			}
 		printf("\n");
 		}
