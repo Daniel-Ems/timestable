@@ -8,19 +8,25 @@ int main(int argc, char *argv[])
 	
 	if(argc >= 4){
 		puts("The program accepts zero, one, or two arguments");
-	}if(argc == 3){
+	}
+	if(argc == 3){
 		max_factor = strtol(argv[2], NULL, 10);
 		min_factor = strtol(argv[1], NULL, 10);
-	}if(argc == 2){
+	}
+	if(argc == 2){
 		max_factor = strtol(argv[1], NULL, 10);
-	}if(max_factor < min_factor || max_factor > 32){
-		printf("***Please keep your maximum between 1 and 32***\n");
+	}
+	if(max_factor < min_factor || max_factor > 32){
+		printf("*** Please keep your Maximum between 1 and 32***\n");
+		printf("*** Your Maximum has been auto-corrected to 10 ***\n");
 		max_factor = 10;
-	}if(min_factor < 0 || min_factor > max_factor){
-		printf("***Please keep your minumum betwwn 1 and the maximum***\n");
+	}
+	if(min_factor < 0 || min_factor > max_factor){
+		printf("*** Please keep your Minimum between 1 and the Maximum ***\n");
+		printf("*** Your Minimum has been auto-corrected to 1 ***\n");
 		min_factor = 1;
 	}
-	printf("Min:%d, Max:%d", min_factor, max_factor);
+	printf("Times Table Minimum:%d, Maximum:%d", min_factor, max_factor);
 	printf("\n");
 	printf("%5s", "*");
 	for(int i = min_factor; i  <= max_factor; i++){
